@@ -58,6 +58,9 @@
     flex-direction: column;
     align-items: center;
 }
+.contenedor-producto-yerba-precio{
+    text-align: center;
+}
 .boton-agregar{
     background-color: goldenrod;
     padding: 0.5rem;

@@ -147,6 +147,7 @@ const productos = [
 
 
 const contenedorProductos = document.querySelector(".contenedor-productos");
+const boton = document.querySelectorAll(".dropdown-item");
 
 function cargarProductos() {
     contenedorProductos.innerHTML = "";
@@ -175,3 +176,10 @@ function cargarProductos() {
 }
 cargarProductos();
 
+boton.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+    const productoboton = productos.filter(producto => producto.id === e.currentTarget.id);
+    // ACA ME TRABE , QUIERO QUE DEVUELVA LOS PRODUCTOS QUE FILTRE SEGUN EL ID DEL BOTON
+    console.log(productoboton);
+    })
+})
