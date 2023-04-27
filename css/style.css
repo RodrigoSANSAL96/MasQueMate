@@ -1,0 +1,92 @@
+.nav-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.boton-carrito{
+    border-width: 0.1rem;
+    border-radius: 1rem;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    background-color: white;
+    font-size: 2rem;
+}
+.boton-carrito:hover{
+    background-color: goldenrod;
+}
+.main{
+    background-color: rgb(216, 178, 81);
+    padding: 2rem;
+}
+.título{
+    margin: 0rem;
+    text-align: center;
+    padding: 1rem;
+}
+.subtítulo{
+    text-align: center;
+    padding: 1rem;
+    border-style: solid;
+    border-radius: 1rem;
+    width: 30%;
+    margin: 20px auto 0px auto;
+    background-color: white;
+}
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 2rem 2rem 2rem;
+    background-color: white;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-radius: 1rem;
+    
+}
+.contenedor-producto{
+    align-items: center;
+    margin: 2rem;
+}
+.contenedor-producto-yerba-imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-producto-yerba-información{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boton-agregar{
+    background-color: goldenrod;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+
+.footer{
+    border-top: solid;
+    padding-top: 2rem;
+}
+.col{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+.footer-título{
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: rgb(216, 178, 81);
+}
+.footer-caja{
+    margin: 1.5rem;
+}
+.footer-link{
+    color: black;
+}
