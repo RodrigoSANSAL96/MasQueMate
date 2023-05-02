@@ -6,14 +6,17 @@
     padding-left: 2rem;
 }
 .boton-carrito{
+    border-style: solid;
     border-width: 0.1rem;
     border-radius: 1rem;
     padding: 0.25rem 1rem 0.25rem 1rem;
     background-color: white;
     font-size: 2rem;
+    color: black;
 }
 .boton-carrito:hover{
     background-color: goldenrod;
+    border-style: solid;
 }
 .main{
     background-color: rgb(216, 178, 81);
@@ -92,4 +95,34 @@
 }
 .footer-link{
     color: black;
+}
+
+/* Carrito */
+.contenedor-carrito{
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+}
+.contenedor-producto-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.boton-eliminar{
+    background-color: white;
+    border-style: none;
+    font-size: 2rem;
+}
+.bi-dash-circle-fill{
+    color: red;
+}
+.subtítulo-carrito{
+    text-align: center;
+    font-size: 1rem;
+}
+.carrito-boton-final{
+    
 }
