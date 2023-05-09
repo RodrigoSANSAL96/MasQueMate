@@ -1,145 +1,169 @@
 const productos = [
     {
         título: "Yerba Aguantadora",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "01",
         imagen: "./recursos/yerbas/Aguantadora.jpg",
         precio: 1000
     },
     {
         título: "Yerba Rosamonte",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "02",
         imagen: "./recursos/yerbas/Rosamonte.jpg",
         precio: 1100
     },
     {
         título: "Yerba Canarias",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "03",
         imagen: "./recursos/yerbas/Canarias.jpg",
         precio: 1200
     },
     {
         título: "Yerba Playadito",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "04",
         imagen: "./recursos/yerbas/Playadito.jpg",
         precio: 1100
     },
     {
         título: "Yerba Tucanguá",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "05",
         imagen: "./recursos/yerbas/Tucanguá.jpg",
         precio: 1300
     },
     {
         título: "Yerba Unión",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "06",
         imagen: "./recursos/yerbas/Unión.jpg",
         precio: 1400
     },
     {
         título: "Yerba Verdeflor",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "07",
         imagen: "./recursos/yerbas/Verdeflor.jpg",
         precio: 1000
     },
     {
         título: "Yerba Amanda",
-        id: "Yerba",
+        categoría: "Yerba",
+        id: "08",
         imagen: "./recursos/yerbas/Amanda.jpg",
         precio: 1000
     },
     {
         título: "Mate 01",
-        id: "Mate",
+        categoría: "Mate",
+        id: "10",
         imagen: "./recursos/mates/Mate01.jpg",
         precio: 5000
     },
     {
         título: "Mate 02",
-        id: "Mate",
+        categoría: "Mate",
+        id: "11",
         imagen: "./recursos/mates/Mate02.jpg",
         precio: 4500
     },
     {
         título: "Mate 03",
-        id: "Mate",
+        categoría: "Mate",
+        id: "12",
         imagen: "./recursos/mates/Mate03.jpg",
         precio: 4600
     },
     {
         título: "Mate 04",
-        id: "Mate",
+        categoría: "Mate",
+        id: "13",
         imagen: "./recursos/mates/Mate04.jpg",
         precio: 4700
     },
     {
         título: "Mate 05",
-        id: "Mate",
+        categoría: "Mate",
+        id: "14",
         imagen: "./recursos/mates/Mate05.jpg",
         precio: 4800
     },
     {
         título: "Mate 06",
-        id: "Mate",
+        categoría: "Mate",
+        id: "15",
         imagen: "./recursos/mates/Mate06.jpg",
         precio: 4900
     },
     {
         título: "Mate 07",
-        id: "Mate",
+        categoría: "Mate",
+        id: "16",
         imagen: "./recursos/mates/Mate07.jpg",
         precio: 5100
     },
     {
         título: "Mate 08",
-        id: "Mate",
+        categoría: "Mate",
+        id: "17",
         imagen: "./recursos/mates/Mate08.jpg",
         precio: 5100
     },
     {
         título: "Termo 01",
-        id: "Termo",
+        categoría: "Termo",
+        id: "18",
         imagen: "./recursos/termos/Termo01.jpg",
         precio: 9000
     },
     {
         título: "Termo 02",
-        id: "Termo",
+        categoría: "Termo",
+        id: "19",
         imagen: "./recursos/termos/Termo02.jpg",
         precio: 8000
     },
     {
         título: "Termo 03",
-        id: "Termo",
+        categoría: "Termo",
+        id: "20",
         imagen: "./recursos/termos/Termo03.jpg",
         precio: 7000
     },
     {
         título: "Termo 04",
-        id: "Termo",
+        categoría: "Termo",
+        id: "21",
         imagen: "./recursos/termos/Termo04.jpg",
         precio: 6000
     },
     {
         título: "Termo 05",
-        id: "Termo",
+        categoría: "Termo",
+        id: "22",
         imagen: "./recursos/termos/Termo05.jpg",
         precio: 5000
     },
     {
         título: "Termo 06",
-        id: "Termo",
+        categoría: "Termo",
+        id: "23",
         imagen: "./recursos/termos/Termo06.jpg",
         precio: 6000
     },
     {
         título: "Termo 07",
-        id: "Termo",
+        categoría: "Termo",
+        id: "24",
         imagen: "./recursos/termos/Termo07.jpg",
         precio: 7000
     },
     {
         título: "Termo 08",
-        id: "Termo",
+        categoría: "Termo",
+        id: "25",
         imagen: "./recursos/termos/Termo08.jpg",
         precio: 8000
     },
@@ -148,10 +172,11 @@ const productos = [
 
 const contenedorProductos = document.querySelector(".contenedor-productos");
 const boton = document.querySelectorAll(".dropdown-item");
+const subtítulo = document.querySelector("#subtítulo");
 
-function cargarProductos() {
+function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
-    productos.forEach(producto => {
+    productosElegidos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("contenedor-producto");
         div.innerHTML = `
@@ -174,12 +199,20 @@ function cargarProductos() {
 
     })
 }
-cargarProductos();
+cargarProductos(productos);
 
 boton.forEach(boton => {
     boton.addEventListener("click", (e) => {
-    const productoboton = productos.filter(producto => producto.id === e.currentTarget.id);
-    // ACA ME TRABE , QUIERO QUE DEVUELVA LOS PRODUCTOS QUE FILTRE SEGUN EL ID DEL BOTON
-    console.log(productoboton);
+        if (e.currentTarget.id != "Todos"){
+         const productoSubtítulo = productos.find(producto => producto.categoría === e.currentTarget.id);
+         subtítulo.innerText = productoSubtítulo.categoría;
+         const productoboton = productos.filter(producto => producto.categoría === e.currentTarget.id);
+         cargarProductos(productoboton);
+        } else {
+            subtítulo.innerText = "Todos los productos";
+            cargarProductos(productos);
+        }
     })
 })
+
+
