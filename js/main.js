@@ -228,9 +228,10 @@ function botonAgregar () {
 }
 
 let productosEnCarrito;
-const productosEnCarritoJS = JSON.parse(localStorage.getItem("productosEnCarrito"));
+
+const productosEnCarritoJS = localStorage.getItem("productosEnCarrito");
 if(productosEnCarritoJS){
-    productosEnCarrito = productosEnCarritoJS;
+    productosEnCarrito = JSON.parse(productosEnCarritoJS);
 }else {
     productosEnCarrito = [];
 }
