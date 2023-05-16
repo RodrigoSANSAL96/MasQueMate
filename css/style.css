@@ -132,7 +132,17 @@ header{
 }
 .carrito-boton-final{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+.boton-seguir-comprando{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 1rem;
+    background-color: rgb(216, 178, 81);
+    padding: 0.2rem;
+    color: black;
+    text-decoration: none;
 }
 .boton-restablecer, .boton-comprar{
     margin: 0.5rem;

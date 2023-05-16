@@ -30,13 +30,14 @@ function agregarAlCarrito(){
         `;
         contenedorCarritoProducto.append(div);
     })
-  }//else {
-    //const div = document.createElement("div");
-    //div.innerHTML = `
-    //  <h4>Tu carrito está vacio</h4>
-   // `;
-   // contenedorCarritoProducto.append(div);
- // }
+  } else {
+    const div = document.createElement("div");
+    div.classList.add("contenedor-producto-carrito");
+    div.innerHTML = `
+      <h4>Tu carrito está vacio</h4>
+    `;
+    contenedorCarritoProducto.append(div);
+  }
   botonEliminar();
 }
 agregarAlCarrito();
@@ -56,3 +57,13 @@ function eliminarDelCarrito(e){
 
   localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
+
+const vaciarCarrito = document.querySelector("#boton-vaciar");
+vaciarCarrito.addEventListener("click", vaciarElCarrito);
+
+function vaciarElCarrito(){
+  productosEnCarrito.length = 0;
+  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+// ACA NO ME ESTARIA FUNCIONANDO EL BOTON VACIAR
