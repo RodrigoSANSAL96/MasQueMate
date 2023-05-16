@@ -5,7 +5,7 @@ const contenedorCarritoPrecio = document.querySelector("#carrito-precio");
 const contenedorCarritoBotones = document.querySelector("#carrito-botones");
 
 function agregarAlCarrito(){
-  if (productosEnCarrito && productosEnCarrito.length > 0) {
+  if (productosEnCarrito) {
 
     contenedorCarritoProducto.innerHTML = "";
     productosEnCarrito.forEach(producto => {
@@ -30,12 +30,13 @@ function agregarAlCarrito(){
         `;
         contenedorCarritoProducto.append(div);
     })
-  }else {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <h4>Tu carrito está vacio</h4>
-    `;
-  }
+  }//else {
+    //const div = document.createElement("div");
+    //div.innerHTML = `
+    //  <h4>Tu carrito está vacio</h4>
+   // `;
+   // contenedorCarritoProducto.append(div);
+ // }
   botonEliminar();
 }
 agregarAlCarrito();
