@@ -13,7 +13,7 @@ function agregarAlCarrito(){
         div.classList.add("contenedor-producto-carrito");
         div.innerHTML = `
           <div class="carrito-img">
-           <img src="${producto.imagen}" alt="${producto.título}">
+           <img src="../${producto.imagen}" alt="${producto.título}">
           </div>
           <div class="carrito-título">
            <h3>${producto.título}</h3>
@@ -63,8 +63,8 @@ const vaciarCarrito = document.querySelector("#boton-vaciar");
 vaciarCarrito.addEventListener("click", vaciarElCarrito);
 
 function vaciarElCarrito(){
-  productosEnCarrito.length = 0;
-  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+  productosEnCarrito = [];
+  localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
   agregarAlCarrito();
 }
 
@@ -82,7 +82,7 @@ botonComprar.addEventListener("click", comprar);
 
 function comprar(){
   productosEnCarrito.length = 0;
-  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+  localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
   const comprado = document.querySelector("#comprado");
   comprado.innerHTML = `<h3>¡Gracias por su compra!</h3>`;
   agregarAlCarrito();
