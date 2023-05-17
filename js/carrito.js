@@ -39,6 +39,7 @@ function agregarAlCarrito(){
     contenedorCarritoProducto.append(div);
   }
   botonEliminar();
+  precioTotal()
 }
 agregarAlCarrito();
 
@@ -64,6 +65,25 @@ vaciarCarrito.addEventListener("click", vaciarElCarrito);
 function vaciarElCarrito(){
   productosEnCarrito.length = 0;
   localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+  agregarAlCarrito();
 }
 
 // ACA NO ME ESTARIA FUNCIONANDO EL BOTON VACIAR
+
+const actualizarTotal = document.querySelector("#total");
+
+function precioTotal(){
+  const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+  total.innerText = `$${totalCalculado}`;
+}
+
+const botonComprar = document.querySelector("#boton-comprar");
+botonComprar.addEventListener("click", comprar);
+
+function comprar(){
+  productosEnCarrito.length = 0;
+  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+  const comprado = document.querySelector("#comprado");
+  comprado.innerHTML = `<h3>¡Gracias por su compra!</h3>`;
+  agregarAlCarrito();
+}

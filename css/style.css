@@ -149,7 +149,7 @@ header{
 }
 .contenedor-precio-final{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    ;
     border-style: solid;
     border-radius: 1rem;
     border-width: 0.1rem;
