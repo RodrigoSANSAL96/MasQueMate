@@ -51,6 +51,20 @@ function botonEliminar (){
 }
 
 function eliminarDelCarrito(e){
+  Toastify({
+    text: "Producto eliminado",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to bottom, goldenrod, rgb(216, 178, 81))",
+      border: "solid gray",
+      borderRadius: "1rem"
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
   let idBoton = e.currentTarget.id;
   const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
   productosEnCarrito.splice(index, 1);
@@ -63,12 +77,46 @@ const vaciarCarrito = document.querySelector("#boton-vaciar");
 vaciarCarrito.addEventListener("click", vaciarElCarrito);
 
 function vaciarElCarrito(){
-  productosEnCarrito = [];
-  localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
-  agregarAlCarrito();
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: 'btn btn-success',
+      cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
+  })
+  
+  swalWithBootstrapButtons.fire({
+    title: '¿Estas seguro?',
+    text: "Vaciaras el carrito",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Si, estoy seguro',
+    cancelButtonText: 'No, no estoy seguro',
+    reverseButtons: true,
+    style: {
+      margin: "2rem",
+      padding: "2rem"
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {       
+      productosEnCarrito = [];
+      localStorage.setItem("productosEnCarrito", JSON.stringify(productosEnCarrito));
+      agregarAlCarrito();
+      swalWithBootstrapButtons.fire(
+        'Tu carrito se vació',
+        
+      )
+    } else if (
+      result.dismiss === Swal.DismissReason.cancel
+    ) {
+      swalWithBootstrapButtons.fire(
+        'Cancelado',
+      )
+    }
+  })
+
 }
 
-// ACA NO ME ESTARIA FUNCIONANDO EL BOTON VACIAR
 
 const actualizarTotal = document.querySelector("#total");
 
