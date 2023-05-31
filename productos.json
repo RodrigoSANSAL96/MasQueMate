@@ -1,0 +1,170 @@
+[
+    {
+        "título": "Yerba Aguantadora",
+        "categoría": "Yerba",
+        "id": "01",
+        "imagen": "./recursos/yerbas/Aguantadora.jpg",
+        "precio": 1000
+    },
+    {
+        "título": "Yerba Rosamonte",
+        "categoría": "Yerba",
+        "id": "02",
+        "imagen": "./recursos/yerbas/Rosamonte.jpg",
+        "precio": 1100
+    },
+    {
+        "título": "Yerba Canarias",
+        "categoría": "Yerba",
+        "id": "03",
+        "imagen": "./recursos/yerbas/Canarias.jpg",
+        "precio": 1200
+    },
+    {
+        "título": "Yerba Playadito",
+        "categoría": "Yerba",
+        "id": "04",
+        "imagen": "./recursos/yerbas/Playadito.jpg",
+        "precio": 1100
+    },
+    {
+        "título": "Yerba Tucanguá",
+        "categoría": "Yerba",
+        "id": "05",
+        "imagen": "./recursos/yerbas/Tucanguá.jpg",
+        "precio": 1300
+    },
+    {
+        "título": "Yerba Unión",
+        "categoría": "Yerba",
+        "id": "06",
+        "imagen": "./recursos/yerbas/Unión.jpg",
+        "precio": 1400
+    },
+    {
+        "título": "Yerba Verdeflor",
+        "categoría": "Yerba",
+        "id": "07",
+        "imagen": "./recursos/yerbas/Verdeflor.jpg",
+        "precio": 1000
+    },
+    {
+        "título": "Yerba Amanda",
+        "categoría": "Yerba",
+        "id": "08",
+        "imagen": "./recursos/yerbas/Amanda.jpg",
+        "precio": 1000
+    },
+    {
+        "título": "Mate 01",
+        "categoría": "Mate",
+        "id": "10",
+        "imagen": "./recursos/mates/Mate01.jpg",
+        "precio": 5000
+    },
+    {
+        "título": "Mate 02",
+        "categoría": "Mate",
+        "id": "11",
+        "imagen": "./recursos/mates/Mate02.jpg",
+        "precio": 4500
+    },
+    {
+        "título": "Mate 03",
+        "categoría": "Mate",
+        "id": "12",
+        "imagen": "./recursos/mates/Mate03.jpg",
+        "precio": 4600
+    },
+    {
+        "título": "Mate 04",
+        "categoría": "Mate",
+        "id": "13",
+        "imagen": "./recursos/mates/Mate04.jpg",
+        "precio": 4700
+    },
+    {
+        "título": "Mate 05",
+        "categoría": "Mate",
+        "id": "14",
+        "imagen": "./recursos/mates/Mate05.jpg",
+        "precio": 4800
+    },
+    {
+        "título": "Mate 06",
+        "categoría": "Mate",
+        "id": "15",
+        "imagen": "./recursos/mates/Mate06.jpg",
+        "precio": 4900
+    },
+    {
+        "título": "Mate 07",
+        "categoría": "Mate",
+        "id": "16",
+        "imagen": "./recursos/mates/Mate07.jpg",
+        "precio": 5100
+    },
+    {
+        "título": "Mate 08",
+        "categoría": "Mate",
+        "id": "17",
+        "imagen": "./recursos/mates/Mate08.jpg",
+        "precio": 5100
+    },
+    {
+        "título": "Termo 01",
+        "categoría": "Termo",
+        "id": "18",
+        "imagen": "./recursos/termos/Termo01.jpg",
+        "precio": 9000
+    },
+    {
+        "título": "Termo 02",
+        "categoría": "Termo",
+        "id": "19",
+        "imagen": "./recursos/termos/Termo02.jpg",
+        "precio": 8000
+    },
+    {
+        "título": "Termo 03",
+        "categoría": "Termo",
+        "id": "20",
+        "imagen": "./recursos/termos/Termo03.jpg",
+        "precio": 7000
+    },
+    {
+        "título": "Termo 04",
+        "categoría": "Termo",
+        "id": "21",
+        "imagen": "./recursos/termos/Termo04.jpg",
+        "precio": 6000
+    },
+    {
+        "título": "Termo 05",
+        "categoría": "Termo",
+        "id": "22",
+        "imagen": "./recursos/termos/Termo05.jpg",
+        "precio": 5000
+    },
+    {
+        "título": "Termo 06",
+        "categoría": "Termo",
+        "id": "23",
+        "imagen": "./recursos/termos/Termo06.jpg",
+        "precio": 6000
+    },
+    {
+        "título": "Termo 07",
+        "categoría": "Termo",
+        "id": "24",
+        "imagen": "./recursos/termos/Termo07.jpg",
+        "precio": 7000
+    },
+    {
+        "título": "Termo 08",
+        "categoría": "Termo",
+        "id": "25",
+        "imagen": "./recursos/termos/Termo08.jpg",
+        "precio": 8000
+    }
+]
